@@ -1,0 +1,163 @@
+/* Color */
+:root
+{
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line :  hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+
+}
+/* GLOBAL STYLE  */
+*
+{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body
+{
+    font-size: 18px;
+    font-family: 'Outfit';
+    background-color: var(--main-bg);
+}
+.card
+{
+    background-color: var(--card-bg);
+    position: absolute;
+    width: 30%;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    border-radius: 2rem;
+    padding: 2rem;
+    color: var(--white);
+}
+
+.card .image
+{
+    position: relative;
+    cursor: pointer;
+    
+}
+.card .image img
+{
+    width: 100%;
+    display: block;
+}
+.card .image::before
+{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(178deg 100% 50% / 49%);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: .5s;
+}
+.card .image .icon 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    opacity: 0;
+    width: 4rem;
+
+}
+.card .image:hover::before,
+.card .image:hover .icon
+{
+    opacity: 1;
+}
+
+.card h1
+{
+    margin: 1rem 0;
+    font-size: 2rem;
+    color: var(--white);
+    transition: .3s;
+    cursor: pointer;
+}
+.card h1:hover{
+    color: var(--Cyan);
+}
+.card p
+{
+    color: var(--Soft-blue);
+    margin: 1rem 0 ;
+    line-height: 1.4;
+}
+
+.card ul
+{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+.card ul li span 
+{
+    margin-left: 0.5rem;
+}
+.card ul li:not(:last-child) span
+{
+    color: var(--Cyan);
+}
+.card ul li:last-child span
+{
+    color: var(--Soft-blue);
+}
+.card .created
+{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    position: relative;
+}
+.card .created p
+{
+    margin-left: 2rem;
+}
+.card .created p span
+{
+    color:var(--white);
+    cursor: pointer;
+    transition: .3s;
+}
+.card .created p span:hover
+{
+    color: var(--Cyan);
+}
+.card .created .avater 
+{
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 2px solid var(--white);
+}
+.card .created .avater img
+{
+    width: 100%;
+}
+.card .created::before
+{
+    content: "";
+    background-color: var(--line);
+    width: 95%;
+    height: 2px;
+    position: absolute;
+
+    top: -10px;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+@media (max-width:675px) {
+    .card
+    {
+        min-width: 90%;
+    }
+}
