@@ -26,7 +26,7 @@ body
 {
     background-color: var(--card-bg);
     position: absolute;
-    width: 30%;
+    width: 23%;
     top: 50%;
     left:50%;
     transform: translate(-50%, -50%);
