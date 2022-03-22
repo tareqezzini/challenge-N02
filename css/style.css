@@ -26,7 +26,7 @@ body
 {
     background-color: var(--card-bg);
     position: absolute;
-    width: 23%;
+    width: 22%;
     top: 50%;
     left:50%;
     transform: translate(-50%, -50%);
@@ -120,6 +120,7 @@ body
 .card .created p
 {
     margin-left: 2rem;
+    font-size: 1rem;
 }
 .card .created p span
 {
@@ -134,8 +135,8 @@ body
 .card .created .avater 
 {
     display: inline-block;
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
     border: 2px solid var(--white);
 }
